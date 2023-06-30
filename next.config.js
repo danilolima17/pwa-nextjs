@@ -1,3 +1,15 @@
+const isProd = process.ENV_NODE === 'production'
+const withPWA = require('next-pwa')({
+  dest: 'public'
+})
+
+module.exports = withPWA({
+  pwa: {
+    dest: 'public',
+    disable: !isProd
+  }
+})
+
 const nextConfig = {
   reactStrictMode: true,
   async headers() {
@@ -12,8 +24,7 @@ const nextConfig = {
         ],
       },
     ];
-  },
-  sw: '/sw.js', // Caminho para o arquivo do Service Worker
+  }, // Caminho para o arquivo do Service Worker
 };
 
 module.exports = nextConfig;
