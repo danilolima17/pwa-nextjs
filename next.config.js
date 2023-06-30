@@ -1,5 +1,6 @@
 const withPWA = require('next-pwa')({
-  dest: 'public'
+  dest: 'public',
+  sw: 'sw.js'
 });
 
 module.exports = withPWA({
@@ -10,8 +11,8 @@ module.exports = withPWA({
         source: '/(.*)',
         headers: [
           {
-            key: 'Custom-Header',
-            value: 'Example-Value',
+            key: 'Accept-Language',
+            value: 'pt-BR',
           },
         ],
       },

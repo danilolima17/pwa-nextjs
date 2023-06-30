@@ -34,7 +34,6 @@ const AreaRight = styled.div`
     }
 `
 
-export const config = { amp: 'hybrid' }
 
 export default function Section() {
     const isAmp = useAmp()
