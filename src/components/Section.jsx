@@ -14,6 +14,10 @@ const SectionContainer = styled.section`
         margin-top: 3rem;
         flex-direction: column-reverse;
         gap: 1rem;
+
+        img {
+            width: 300px;
+        }
     } 
 `
 
@@ -22,6 +26,7 @@ const AreaRight = styled.div`
     flex-direction: column;
     max-width: 400px;
     gap: 1rem;
+    padding: 3rem;
 
     h1 {
         font-size: 30px;
@@ -29,6 +34,7 @@ const AreaRight = styled.div`
     }
 `
 
+export const config = { amp: 'hybrid' }
 
 export default function Section() {
     const isAmp = useAmp()

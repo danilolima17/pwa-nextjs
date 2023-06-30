@@ -24,6 +24,12 @@ const MainContainer = styled.main`
 
     @media (max-width: 667px) {
         flex-direction: column-reverse;
+        margin-top: 2rem;
+
+        img {
+            width: 320px;
+            height: 180;
+        }
     }
 `
 const Button = styled.button`
@@ -35,6 +41,7 @@ const Button = styled.button`
     border-radius: 18px;
     font-size: 17px;
 `
+
 
 export default function Main() {
     const isAmp = useAmp()
@@ -50,8 +57,8 @@ export default function Main() {
                 {isAmp ? (
                     <amp-img alt="A view of the sea"
                     src={imageMain}
-                    width="350"
-                    height="275"
+                    width="100"
+                    height="100"
                     layout="responsive">
                     </amp-img>
                 ) : (
