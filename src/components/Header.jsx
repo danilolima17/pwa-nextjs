@@ -1,7 +1,7 @@
 const { styled } = require("styled-components");
 
 const HeaderContainer = styled.header`
-    background-color: red;
+    background-color: yellow;
     display: flex;
     justify-content: space-around;
     align-items: center;
